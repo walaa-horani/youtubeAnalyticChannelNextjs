@@ -1,13 +1,13 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
+// import { auth } from "@clerk/nextjs/server";
+// import { redirect } from "next/navigation";
 import { UserProfile } from "@clerk/nextjs";
 
-export default async function SettingsPage() {
-    const { userId } = await auth();
+export default function SettingsPage() {
+    // const { userId } = await auth();
 
-    if (!userId) {
-        redirect("/sign-in");
-    }
+    // if (!userId) {
+    //     redirect("/sign-in");
+    // }
 
     return (
         <div className="space-y-8">
@@ -17,7 +17,8 @@ export default async function SettingsPage() {
             </div>
 
             <div className="flex justify-center">
-                <UserProfile routing="hash" />
+                {/* <UserProfile routing="hash" /> */}
+                <p>Settings Profile (Clerk Disabled for Debug)</p>
             </div>
         </div>
     );
